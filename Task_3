@@ -1,1 +1,24 @@
+class Main {
+	public static void main(String[] args){
+		String str = "sdfdsf,srwe14,7854,,dgd,afrfg6789421,afasd234,1235zcpoyudnvode..,10";	
+		char s = '4';
+		int num = 0;
+		int[] ind = new int[5];
+		int j = 0;
 
+
+		char[] subStr = str.toCharArray();
+		System.out.print("Позиция вхождения 4 = ");
+		
+		for (int i = 0; i < subStr.length; i++) {
+			if (subStr[i] == s){
+				num += 1;
+				System.out.print(i + ";");
+			}
+
+		}
+		System.out.println();
+
+		System.out.println("Элемент 4 встречается: " + num + " раза");
+	};
+};
