@@ -1,0 +1,27 @@
+class Main {
+	public static void main(String[] args){
+		String str = "Программирование это хорошо, но есть что-то лучше";
+		String zap = "";
+		String prob = " ";
+
+		char[] chArr = str.toCharArray();
+		for (int i = 0; i < chArr.length; i++) {
+			if(chArr[i] == ','){
+    			zap = "" + chArr[i];
+			}
+		}
+
+		String newStr = str.replace(",", "");
+		
+		String[] subStr;
+      	String delimeter = " ";
+      	subStr = newStr.split(delimeter);
+
+      	for(int i = subStr.length-1; i >= 0; i--){
+      		if(subStr[i].equals("но")){
+      			subStr[i] = subStr[i] + zap;
+      		}
+      		System.out.print(subStr[i] + prob);
+      	}
+	};
+};
