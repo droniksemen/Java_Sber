@@ -1,0 +1,27 @@
+class Main {
+	public static void main(String[] args){
+		String a = "abdc";
+		String b = "ckke";
+		
+		char[] result_a = a.toCharArray();
+		int len = a.length();
+		char[] result_b = b.toCharArray();
+		int len2 = a.length();
+		
+		char[] c = new char[10];
+
+
+		for (int i = 0; i < len; i++) {
+			c[i] = result_a[i];
+		}
+		for (int i = len; i < len+len2; i++) {
+			c[i] = result_b[i-len];
+		}
+
+		for (int i = 0; i < 8; i++) {
+			if(c[i+1] != c[i]){
+				System.out.print(c[i]);
+			}
+		}
+	}
+}
