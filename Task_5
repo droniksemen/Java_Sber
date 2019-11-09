@@ -1,0 +1,33 @@
+class Main {
+	public static void main(String[] args){
+		String a = "B15";
+		char[] result_a = a.toCharArray();
+
+		String arrNum = "1234567890";
+		char[] result_arrNum = arrNum.toCharArray();
+
+		String arrAL = "ABCDEFG";
+		char[] result_arrAL = arrAL.toCharArray();
+
+		int count = 0;
+		int numStr = 0;
+		
+
+		for (int i = 0; i<result_arrAL.length; i++) {
+			if(result_a[0] == result_arrAL[i]){
+				count = i+1;
+			}
+		}
+
+		for (int i = 0; i<result_arrNum.length; i++) {
+			if(result_a[1] == result_arrNum[i]){
+				System.out.print("номер строки " + (String.valueOf(result_a[1])+ String.valueOf(result_a[2])));
+			}
+		}
+
+
+
+		System.out.println(" номер столбца " + count);
+
+	}
+}
