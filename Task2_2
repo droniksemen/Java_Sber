@@ -1,0 +1,28 @@
+class Main {
+	public static void main(String[] args){
+		String str = "Программирование это хорошо, но есть что-то, лучше";
+		String a = " ";
+		char b = 0;
+
+		String[] subStr;
+      	String delimeter = " ";
+      	subStr = str.split(delimeter);
+
+      
+      	for(int i = subStr.length-1; i >= 0; i--){
+
+      		char[] chArr = subStr[i].toCharArray();
+      		int tmp;
+
+      		for (int j = 0; j < chArr.length; j++) {
+      			if (chArr[j] == ',') {
+      				System.out.print(chArr[j]);
+      				subStr[i] = subStr[i].substring(0,chArr.length-1);
+      			}
+      		}
+
+      		System.out.print(" " + subStr[i]);
+      	}
+
+	}
+}
